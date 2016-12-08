@@ -29,56 +29,56 @@ Fiber(function () {
     var Items = db.collection('items');
 
 
-    // console.log('deleting')
-    // fiber = Fiber.current;
-    // Items.drop().then((data) => {
-    //     fiber.run();
-    // })
-    // Fiber.yield();
+    console.log('deleting')
+    fiber = Fiber.current;
+    Items.drop().then((data) => {
+        fiber.run();
+    })
+    Fiber.yield();
 
-    // //insert 10k with bobbington jones
-    // console.log("Inserting 100k ")
-    // var itemsToInsert = [];
-    // for (var i = 0; i < 100000; ++i) {
-    //     itemsToInsert.push({
-    //         itemName: "bobbington jones",
-    //         dumbo: makeid(),
-    //         num: 44.4444,
-    //         date: new Date(),
-    //         obj: {
-    //             test: makeid(),
-    //             junk: "this is some funk"
-    //         }
-    //     })
-    // }
+    //insert 10k with bobbington jones
+    console.log("Inserting 100k ")
+    var itemsToInsert = [];
+    for (var i = 0; i < 100000; ++i) {
+        itemsToInsert.push({
+            itemName: "bobbington jones",
+            dumbo: makeid(),
+            num: 44.4444,
+            date: new Date(),
+            obj: {
+                test: makeid(),
+                junk: "this is some funk"
+            }
+        })
+    }
 
-    // fiber = Fiber.current;
-    // Items.insertMany(itemsToInsert, (err, result) => {
-    //     fiber.run();
-    // });
-    // Fiber.yield();
+    fiber = Fiber.current;
+    Items.insertMany(itemsToInsert, (err, result) => {
+        fiber.run();
+    });
+    Fiber.yield();
 
-    // //insert 100k random
-    // console.log("Inserting 1000k")
-    // var itemsToInsert = [];
-    // for (var i = 0; i < 1000000; ++i) {
-    //     itemsToInsert.push({
-    //         itemName: makeid(),
-    //         dumbo: makeid(),
-    //         num: 44.4444,
-    //         date: new Date(),
-    //         obj: {
-    //             test: makeid(),
-    //             junk: "this is some funk"
-    //         }
-    //     })
-    // }
+    //insert 100k random
+    console.log("Inserting 1000k")
+    var itemsToInsert = [];
+    for (var i = 0; i < 1000000; ++i) {
+        itemsToInsert.push({
+            itemName: makeid(),
+            dumbo: makeid(),
+            num: 44.4444,
+            date: new Date(),
+            obj: {
+                test: makeid(),
+                junk: "this is some funk"
+            }
+        })
+    }
 
-    // fiber = Fiber.current;
-    // Items.insertMany(itemsToInsert, (err, result) => {
-    //     fiber.run();
-    // });
-    // Fiber.yield();
+    fiber = Fiber.current;
+    Items.insertMany(itemsToInsert, (err, result) => {
+        fiber.run();
+    });
+    Fiber.yield();
 
     // //Create index
     console.log("creating index")
