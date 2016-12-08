@@ -4,6 +4,7 @@ var Fiber = require('fibers');
 
 var mongoUrl = 'mongodb://localhost:27017/mongobench';
 
+//thanks to http://stackoverflow.com/users/164392/csharptest-net for this function
 function makeid() {
     var text = "";
     var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
